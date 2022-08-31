@@ -71,7 +71,3 @@ const Tag: React.FC = (props) => {
 
 
 export { Tag };
-
-function updateTag(id: any, arg1: { name: any; }) {
-    throw new Error('Function not implemented.');
-}
