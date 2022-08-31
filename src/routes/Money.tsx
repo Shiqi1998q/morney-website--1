@@ -10,6 +10,7 @@ import { useRecords } from '../hooks/useRecords';
 const MyLayout = styled(Layout)`
   display:flex;
   flex-direction: column;
+
 `;
 
 type Category = '-' | '+'
@@ -22,7 +23,7 @@ const defaultFormData = {
 };
 
 const CategoryWrapper = styled.div`
-    background:#c4c4c4;
+    background:white;
 `;
 
 function Money() {
@@ -39,19 +40,21 @@ function Money() {
     };
     return (
         <MyLayout scrollTop={9999}>
-            <TagsSection value={selected.tagIds}
-                onChange={tagIds => onChange({ tagIds })} />
-            <NoteSection value={selected.note}
-                onChange={note => onChange({ note })} />
             <CategoryWrapper>
                 <CategorySection value={selected.category}
                     onChange={category => onChange({ category })} />
             </CategoryWrapper>
+            <TagsSection value={selected.tagIds}
+                onChange={tagIds => onChange({ tagIds })} />
+            <NoteSection value={selected.note}
+                onChange={note => onChange({ note })} />
+
             <NumberPadSection value={selected.amount}
                 onChange={amount => onChange({ amount })}
                 onOk={submit}
             />
         </MyLayout>
+
     );
 }
 

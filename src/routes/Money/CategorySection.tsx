@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 const Wrapper = styled.section`
   font-size: 24px;
+  color:white;
+  background: #3eb477;
   > ul{
     display:flex;
     > li {
@@ -12,6 +14,7 @@ const Wrapper = styled.section`
       position:relative;
       &.selected::after{
         content: '';
+        color:green;
         display:block; 
         height: 3px;
         background:#333;

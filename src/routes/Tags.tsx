@@ -10,10 +10,15 @@ const TagList = styled.ol`
   font-size: 16px; 
   background:white;
   > li{
+    border-radius:10px;
+    box-shadow: 10px 10px 5px #e3dddd;
     //#e5e5e7
-    border-bottom: 1px solid #d5d5d9;
+   
     line-height: 20px;
     margin-left: 16px;
+    padding-left:12px;
+    padding-top:15px;
+    margin-right:12px;
     > a{
       padding: 12px 16px 12px 0;
       display:flex;
@@ -32,7 +37,7 @@ function Tags() {
     <Layout>
       <TagList>
         {tags.map(tag =>
-          <li key={tag.id}>
+          <li key={tag.id} >
             <Link to={'/tags/' + tag.id}>
               <span className="oneLine">{tag.name}</span>
               <Icon name="right" />

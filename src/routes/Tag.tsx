@@ -17,13 +17,16 @@ const Topbar = styled.header`
     align-items:center;
     line-height:20px;
     padding:14px;
-    background: #FFF;
+    background: #3eb477;
 
 `
 const InputWrapper = styled.div`
     background:white;
     padding:0 16px;
     margin-top:8px;
+    
+    box-shadow: 10px 10px 5px #888888;
+border-radius:25px;
 `
 
 const Tag: React.FC = (props) => {

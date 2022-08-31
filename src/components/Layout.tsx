@@ -6,10 +6,18 @@ const Wrapper = styled.div`
   height: 100vh;
   display:flex;
   flex-direction: column;
+  max-width:520px;
+  margin:0 auto;
+  background: #ffffff;
+  border-radius:30px;
+  
 `;
 const Main = styled.div`
   flex-grow: 1;
   overflow: auto;
+  &::-webkit-scrollbar{
+    display:none;
+  }
 `;
 type Props = {
   [x: string]: ReactNode;

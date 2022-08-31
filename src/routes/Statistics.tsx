@@ -7,20 +7,24 @@ import { useTags } from '../hooks/useTags';
 import day from 'dayjs';
 
 const CategoryWrapper = styled.div`
-  background:white;
+  background:#f9f4f4;
+  
 `;
-
 const Item = styled.div`
   display:flex;
+  color:black;
   justify-content: space-between;
-  background: white;
+  background: #f8f8f8;
+  border-radius:10px;
+  box-shadow: 10px 5px 5px #e0d9d9;
   font-size: 18px;
   line-height: 20px;
   padding: 10px 16px;
+  margin:5px 15px;
+
   > .note{
     margin-right: auto;
     margin-left: 16px;
-    color: #999;
   }
 `;
 const Header = styled.h3`
@@ -36,7 +40,7 @@ function Statistics() {
     const hash: { [K: string]: RecordItem[] } = {}; // {'2020-05-11': [item, item], '2020-05-10': [item, item], '2020-05-12': [item, item, item, item]}
     const selectedRecords = records.filter(r => r.category === category);
 
-    selectedRecords.map(r => {
+    selectedRecords.forEach(r => {
         const key = day(r.createdAt).format('YYYY年MM月DD日');
         if (!(key in hash)) {
             hash[key] = [];
